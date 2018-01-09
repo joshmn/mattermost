@@ -25,6 +25,8 @@ module Mattermost
         create_api_method(:delete, endpoint_name, options)
       end
 
+      private
+
       # /teams/name/:first_name/exists/:last_name
       # arg should be :first_name, :last_name (in the order they appear)
       def create_api_method(http_method, method_name, options = {})
