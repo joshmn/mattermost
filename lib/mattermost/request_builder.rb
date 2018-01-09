@@ -1,5 +1,5 @@
 module Mattermost
-  class EndpointBuilder
+  class RequestBuilder
 
     def initialize(resource, method_name, args, options)
       @resource = resource

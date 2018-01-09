@@ -1,7 +1,7 @@
 require 'mattermost/version'
 require 'mattermost/client'
 require 'mattermost/dsl'
-require 'mattermost/endpoint_builder'
+require 'mattermost/request_builder'
 require 'mattermost/resource_name'
 require 'mattermost/resources/base'
 require 'mattermost/resources/team'

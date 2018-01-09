@@ -38,14 +38,14 @@ module Mattermost
       def define_api_method(method_name, opts)
         if opts[:as] == :self
           define_singleton_method(method_name) do |*args|
-            endpoint = EndpointBuilder.new(self, method_name, args, opts)
-            request = Client.send(opts[:http_method], "#{Mattermost.configuration.raw_host}/api/v4#{endpoint.endpoint}", endpoint.request_options)
+            builder = RequestBuilder.new(self, method_name, args, opts)
+            request = Client.send(opts[:http_method], "#{Mattermost.configuration.raw_host}/api/v4#{builder.endpoint}", builder.request_options)
             request
           end
         else
           define_method(method_name) do |*args|
-            endpoint = EndpointBuilder.new(self, method_name, args, opts)
-            request = Client.send(opts[:http_method], "#{Mattermost.configuration.raw_host}/api/v4#{endpoint.endpoint}", endpoint.request_options)
+            builder = RequestBuilder.new(self, method_name, args, opts)
+            request = Client.send(opts[:http_method], "#{Mattermost.configuration.raw_host}/api/v4#{builder.endpoint}", builder.request_options)
             request
           end
         end
