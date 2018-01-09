@@ -28,6 +28,10 @@ module Mattermost
       @password = ""
     end
 
+    def raw_host
+      "#{Mattermost.configuration.protocol}://#{Mattermost.configuration.server}"
+    end
+
   end
 
   def self.connect!
