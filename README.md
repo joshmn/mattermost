@@ -43,7 +43,7 @@ Without calling `connect!` you won't have the headers required to make the API c
 
 ## Conventions
 
-Inspired by the Active Record pattern ActionDispatch routes (member/collection), you can,
+Inspired by the Active Record pattern, and Action Dispatch routes (member/collection), you can,
 
     User.find(user_id).teams
 
