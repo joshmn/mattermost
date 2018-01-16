@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = "A slick Mattermost API client"
   spec.description   = "A slick Mattermost API client"
-  spec.homepage      = "http://josh.mn"
+  spec.homepage      = "https://github.com/joshmn/mattermost"
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})
